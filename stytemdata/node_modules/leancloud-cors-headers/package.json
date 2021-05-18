@@ -1,0 +1,10 @@
+{
+  "name": "leancloud-cors-headers",
+  "version": "0.1.0",
+  "description": "LeanCloud CORS Headers",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leancloud/leancloud-cors-headers"
+  }
+}
