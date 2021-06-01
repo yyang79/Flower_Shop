@@ -48,13 +48,8 @@ function login_sql(url, pad, callback) {
         if (err) {
             return console.log(err)
         }
-        else {
-            if (pad == data[0].adminPad) {
-                callback("验证通过")
-            } else if (pad == data[0].userPad) {
-                data.push({ message: "验证通过" })
-                callback(data)
-            }
+        if (pad == data[0].adminPad || pad == data[0].userPad) {
+            callback("验证通过")
         }
     })
 }

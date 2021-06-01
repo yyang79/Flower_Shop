@@ -10,8 +10,8 @@ router.post("/login", function (req, res) {
   var type = req.body.type
   if (type == "admin") {
     url = 'select adminPad from admin where adminName = "' + user + '"'
-  } else if (type == "user") {
-    url = 'select * from user,customer where user.userName = customer.userName and user.userName = "' + user + '"'
+  } else if (type == "saler") {
+    url = 'select * from user where userName = "'+user+'"'
   }
   operation.login_sql(url, pad, function (result) {
     res.send(result)
